@@ -1,9 +1,14 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style>
+  .navbar-nav .nav-link {
+    margin-right: 30px; /* Adjust the value as per your preference */
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="#"><img src="../../../assets/logo.svg" alt=""></a>
 
     <!-- Toggle button -->
     <button
@@ -18,42 +23,53 @@
 
     <!-- Collapsible wrapper -->
     <div
-      class="collapse navbar-collapse"
+      class="collapse navbar-collapse justify-content-center"
       id="navbarSupportedContent"
       mdbCollapse
       #basicNavbar="mdbCollapse"
     >
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <!-- Centered links -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link " aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Rent</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sell</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Buy</a>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
             >Disabled</a
           >
         </li>
       </ul>
-      <!-- Left links -->
-
-      <!-- Search form -->
-      <form class="d-flex input-group w-auto">
-        <input
-          type="search"
-          class="form-control"
-          placeholder="Type query"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-primary" type="button">
-          Search
-        </button>
-      </form>
     </div>
     <!-- Collapsible wrapper -->
+
+    <!-- Login/Register buttons -->
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link login" routerLink="/post">
+            <i class="fas fa-plus"></i> Post
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link register" routerLink="/signin">
+            <i class="fas fa-user"></i> Account
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </div>
-  <!-- Container wrapper -->
 </nav>
-<!-- Navbar -->

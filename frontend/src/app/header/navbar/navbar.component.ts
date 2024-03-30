@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+dataSharingService: any;
+locationService: any;
+auth: any;
 
 }

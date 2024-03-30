@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HeaderSectionComponent } from './header-section/header-section.component';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,9 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
     MdbCollapseModule,
 
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

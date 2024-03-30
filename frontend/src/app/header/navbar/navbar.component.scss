@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar-custom {
+  background-color:rgb(255, 255, 255);
+  padding: 1.5em;
+}
+
+
+
+.navbar-custom .navbar-toggler:hover {
+  background-color: rgb(0 0 0 / 65%);
+}
+.nav-link {
+  color: rgb(0, 0, 0);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+
+
+}
+
+.login {
+  color:#ff8c00;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  border: 2px solid#ff8c00;
+  border-radius: 10px;
+
+}
+
+
+.register {
+  color: #737373;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 1px solid #737373;
+  border-radius: 10px;
+  font-weight: 700;
+
+
+}
+
+.navbar-brand img {
+  width: 100px; /* Adjust the width of the logo as per your preference */
+  height: auto; /* Maintain aspect ratio */
+  /* Add any additional styling here */
+  margin-left: 100px;
+}
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link.post {
+  position: relative; /* Position the border */
+}
+
+.navbar-nav .nav-link.post:before {
+  content: "+"; /* Add the "+" symbol before the text */
+  font-weight: bold; /* Make the "+" symbol bold */
+  margin-right: 5px; /* Adjust spacing between "+" and text */
+}
+
+.navbar-nav .nav-link.post:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red; /* Red border color */
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 5px;
+}
