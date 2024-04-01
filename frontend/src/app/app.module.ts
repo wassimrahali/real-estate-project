@@ -11,6 +11,8 @@ import { NavbarComponent } from './header/navbar/navbar.component';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderSectionComponent } from './header-section/header-section.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { HeaderSectionComponent } from './header-section/header-section.componen
     LoginComponent,
     SignupComponent,
     NavbarComponent,
-    HeaderSectionComponent
+    HeaderSectionComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

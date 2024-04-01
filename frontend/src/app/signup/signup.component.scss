@@ -1,0 +1,25 @@
+/* Add this CSS to your stylesheet */
+.login-form {
+  padding: 30px ; /* Add padding */
+  margin: 0px;
+  margin-top: 100px;
+}
+
+.login-btn {
+  background-color: #b81717; /* Change button background color */
+  border-color: #17a2b8; /* Change button border color */
+  font-family: Arial, sans-serif; /* Change font family */
+}
+
+.login-btn:hover {
+  background-color: #138496; /* Change button background color on hover */
+  border-color: #138496; /* Change button border color on hover */
+}
+
+.link-info {
+  color: #000000; /* Change link color */
+}
+
+.link-info:hover {
+  color: #138496; /* Change link color on hover */
+}

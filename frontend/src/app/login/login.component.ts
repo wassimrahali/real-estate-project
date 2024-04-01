@@ -7,6 +7,9 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+toggleNavbar() {
+throw new Error('Method not implemented.');
+}
   form: any = {
     username: null,
     password: null
@@ -14,6 +17,7 @@ export class LoginComponent {
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
+navbarOpen: any;
 
   constructor(private authService: AuthService) { }
 
