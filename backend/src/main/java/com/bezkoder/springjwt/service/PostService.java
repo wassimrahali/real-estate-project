@@ -46,4 +46,7 @@ public class PostService {
         repository.findById(post.getId()).orElseThrow(()-> new Exception("Post no found with id: "+post.getId()));
         return repository.save(post);
     }
+    public List<Post> getPostByType(String type) throws Exception {
+        return repository.findByType(type);
+    }
 }

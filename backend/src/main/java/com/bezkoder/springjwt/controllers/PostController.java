@@ -1,5 +1,4 @@
 package com.bezkoder.springjwt.controllers;
-
 import com.bezkoder.springjwt.models.Post;
 import com.bezkoder.springjwt.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +44,9 @@ public class PostController {
     public Post updatePost(@RequestBody Post post) throws Exception {
         return service.updatePost(post);
 
+    }
+    @PostMapping("/type")
+    public List<Post> getPostByType(@RequestBody Post type) throws Exception {
+        return service.getPostByType(type.getType());
     }
 }

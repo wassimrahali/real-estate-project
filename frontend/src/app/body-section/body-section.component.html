@@ -1,0 +1,16 @@
+<section class="carousel">
+  <div class="carousel__container">
+    <div *ngFor="let item of Posts" class="carousel-item">
+      <span class="prix">500$</span>
+      <img [src]='item.image' class="carousel-item__img" alt="people"/>
+      <div class="carousel-item__details">
+        <div class="controls">
+
+        </div>
+        <h5 class="carousel-item__details--title">{{ item.title }}</h5>
+        <p class="carousel-item__details--subtitle">{{ item.desc }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
