@@ -1,8 +1,8 @@
 package com.bezkoder.springjwt.controllers;
 
 import com.bezkoder.springjwt.models.Post;
-import com.bezkoder.springjwt.service.FileStorageService;
-import com.bezkoder.springjwt.service.PostService;
+import com.bezkoder.springjwt.services.FileStorageService;
+import com.bezkoder.springjwt.services.PostService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

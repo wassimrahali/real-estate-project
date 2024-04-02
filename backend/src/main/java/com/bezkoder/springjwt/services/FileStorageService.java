@@ -1,5 +1,5 @@
 // FileStorageService.java
-package com.bezkoder.springjwt.service;
+package com.bezkoder.springjwt.services;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

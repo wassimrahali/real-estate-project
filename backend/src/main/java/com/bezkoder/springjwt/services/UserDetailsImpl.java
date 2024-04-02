@@ -1,4 +1,4 @@
-package com.bezkoder.springjwt.security.services;
+package com.bezkoder.springjwt.services;
 
 import java.util.Collection;
 import java.util.List;
