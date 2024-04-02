@@ -1,10 +1,10 @@
 package com.bezkoder.springjwt.models;
 
-
 import jakarta.persistence.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.List;
 
 
 @Entity
@@ -21,6 +21,7 @@ public class Post {
 
     @Column(name = "type")
     private String type;
+
     @Column(name = "Description")
     private String description;
 
@@ -31,23 +32,17 @@ public class Post {
     @Column(name = "image")
     private List<String> images;
 
+    // Additional field for image files
+    @Transient // This field won't be persisted in the database
+    private List<MultipartFile> imageFiles;
+
     @Column(name = "temps de publier")
     private LocalDateTime tempsPub;
 
     @Column(name = "typeDeTransaction")
     private String typeDeTransaction;
 
-    @Column(name = "superficie")
-    private int superficie;
-    @Column(name = "Salles de bains")
-    private int sallesDeBains;
-    @Column(name = "Chambres")
-    private int chambres;
-
-    @Column(name = "user_id")
-    private int user_id;
-
-    public Post(Long id, String title, int prix, String type, String description, String lieu, List<String> images, LocalDateTime tempsPub, String typeDeTransaction, int superficie, int sallesDeBains, int chambres, int user_id) {
+    public Post(Long id, String title, int prix, String type, String description, String lieu, List<String> images, List<MultipartFile> imageFiles, LocalDateTime tempsPub, String typeDeTransaction, int superficie, int sallesDeBains, int chambres, int user_id) {
         this.id = id;
         this.title = title;
         this.prix = prix;
@@ -55,6 +50,7 @@ public class Post {
         this.description = description;
         this.lieu = lieu;
         this.images = images;
+        this.imageFiles = imageFiles;
         this.tempsPub = tempsPub;
         this.typeDeTransaction = typeDeTransaction;
         this.superficie = superficie;
@@ -63,8 +59,31 @@ public class Post {
         this.user_id = user_id;
     }
 
+    public List<MultipartFile> getImageFiles() {
+        return imageFiles;
+    }
+
+    public void setImageFiles(List<MultipartFile> imageFiles) {
+        this.imageFiles = imageFiles;
+    }
+
+    @Column(name = "superficie")
+    private int superficie;
+
+    @Column(name = "Salles de bains")
+    private int sallesDeBains;
+
+    @Column(name = "Chambres")
+    private int chambres;
+
+    @Column(name = "user_id")
+    private int user_id;
+
+
     public Post() {
     }
+
+    // Getter and Setter methods
 
     public Long getId() {
         return id;
@@ -187,5 +206,13 @@ public class Post {
                 ", chambres=" + chambres +
                 ", user_id=" + user_id +
                 '}';
+    }
+
+    // Method to update images
+    public void updateImages(List<String> newImages) {
+        if (newImages != null) {
+            this.images.clear();
+            this.images.addAll(newImages);
+        }
     }
 }
