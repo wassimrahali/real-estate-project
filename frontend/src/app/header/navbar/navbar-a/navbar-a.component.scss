@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+.navbar-custom {
+  padding: 1.5em;
+}
+
+
+
+.nav-link {
+  color:#ffffff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+
+
+}
+
+.login {
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  border-radius: 10px;
+
+}
+
+
+.register {
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  border-radius: 10px;
+  font-weight: 800;
+
+
+}
+
+.navbar-brand img {
+  width: 100px; /* Adjust the width of the logo as per your preference */
+  height: auto; /* Maintain aspect ratio */
+  /* Add any additional styling here */
+}
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link.post {
+  position: relative; /* Position the border */
+}
+
+.navbar-nav .nav-link.post:before {
+  content: "+"; /* Add the "+" symbol before the text */
+  font-weight: bold; /* Make the "+" symbol bold */
+  margin-right: 5px; /* Adjust spacing between "+" and text */
+}
+
+.navbar-nav .nav-link.post:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 5px;
+}
+
+.custom-color {
+  color:white;
+}
+
+
+.navbar-custom .navbar-fixed-top {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-custom {
+
+  transition: background-color 0.3s ease;
+}
+/* CSS for small devices (up to 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    background-color:#ff8c00; /* Set the background color to red */
+  }
+
+}
+
+
+
+@media screen and (max-width:1024px) {
+  .navbar {
+    background-color:#ff8c00; /* Set the background color to red */
+  }
+
+}

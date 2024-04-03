@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" [style.background-color]="isScrolled ? 'pink' : ''" [class.shadow]="isScrolled">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" style="background-color: blue;" >
   <div class="container-fluid">
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#"><img src="../../../assets/logo.svg" alt=""></a>
@@ -20,7 +20,6 @@
     <div
       class="collapse navbar-collapse justify-content-center"
       id="navbarSupportedContent"
-      [ngClass]="{'show': navbarOpen}"
     >
       <!-- Centered links -->
       <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start">
@@ -51,7 +50,7 @@
     <!-- Collapsible wrapper -->
 
     <!-- Login/Register buttons -->
-    <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': navbarOpen}">
+    <div class="collapse navbar-collapse justify-content-end">
       <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start">
         <li class="nav-item">
           <a class="nav-link login" routerLink="/post">

@@ -33,10 +33,10 @@ public class Post {
     private List<String> images;
 
     // Additional field for image files
-    @Transient // This field won't be persisted in the database
-    private List<MultipartFile> imageFiles;
 
     @Column(name = "temps de publier")
+    @Temporal(TemporalType.TIMESTAMP) // Use TemporalType.TIMESTAMP for date-time values
+
     private LocalDateTime tempsPub;
 
     @Column(name = "typeDeTransaction")
@@ -50,7 +50,6 @@ public class Post {
         this.description = description;
         this.lieu = lieu;
         this.images = images;
-        this.imageFiles = imageFiles;
         this.tempsPub = tempsPub;
         this.typeDeTransaction = typeDeTransaction;
         this.superficie = superficie;
@@ -59,13 +58,8 @@ public class Post {
         this.user_id = user_id;
     }
 
-    public List<MultipartFile> getImageFiles() {
-        return imageFiles;
-    }
 
-    public void setImageFiles(List<MultipartFile> imageFiles) {
-        this.imageFiles = imageFiles;
-    }
+
 
     @Column(name = "superficie")
     private int superficie;
