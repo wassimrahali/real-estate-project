@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class PostService {
-@Autowired
+    @Autowired
     PostRepository repository;
 
     public Post savePost(Post post){
@@ -36,4 +36,9 @@ public class PostService {
     public List<Post> getPostByType(String type) throws Exception {
         return repository.findByType(type);
     }
+    public void deleteAllPosts() {
+        repository.deleteAll();
+        System.out.println("All posts deleted");
+    }
 }
+

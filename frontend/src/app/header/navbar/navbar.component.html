@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" [style.background-color]="isScrolled ? 'pink' : ''" [class.shadow]="isScrolled">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" [style.background-color]="isScrolled ? '#EE493A' : ''" [class.shadow]="isScrolled">
   <div class="container-fluid">
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#"><img src="../../../assets/logo.svg" alt=""></a>
@@ -54,7 +54,7 @@
     <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': navbarOpen}">
       <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start">
         <li class="nav-item">
-          <a class="nav-link login" routerLink="/post">
+          <a class="nav-link login" routerLink="/create">
             <i class="fas fa-plus-circle"></i> Post <!-- Correct the icon class -->
           </a>
         </li>
