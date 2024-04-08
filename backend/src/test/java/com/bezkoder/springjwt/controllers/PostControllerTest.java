@@ -57,7 +57,7 @@ class PostControllerTest {
         post.setUser_id(1);
 
         MockMultipartFile imageFile = new MockMultipartFile("imageFile", "test.jpg", MediaType.IMAGE_JPEG_VALUE, "test".getBytes());
-        when(fileStorageService.saveFile(any())).thenReturn("/uploads/test.jpg");
+        when(fileStorageService.saveFile(any())).thenReturn("/com/bezkoder/springjwt/uploads/test.jpg");
 
         mockMvc.perform(MockMvcRequestBuilders.multipart("/post")
                         .file(imageFile)

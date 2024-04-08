@@ -1,3 +1,4 @@
+import { RealEstateMenuComponent } from './real-estate-menu/real-estate-menu.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,8 +14,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeaderSectionComponent } from './header-section/header-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { NavbarAComponent } from './header/navbar/navbar-a/navbar-a.component';
-
+import { BodySectionComponent } from './body-section/body-section.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import { NavbarAComponent } from './header/navbar/navbar-a/navbar-a.component';
     HeaderSectionComponent,
     FooterComponent,
     HomeComponent,
-    NavbarAComponent,
+    BodySectionComponent,
+    RealEstateMenuComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { NavbarAComponent } from './header/navbar/navbar-a/navbar-a.component';
 
   ],
   providers: [
-    provideAnimationsAsync(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

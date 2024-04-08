@@ -1,0 +1,60 @@
+
+  <div class="container">
+    <h1>Create new post</h1>
+    <form (submit)="Create()">
+      <fieldset>
+        <div class="form-group">
+          <label for="title">Post Title</label>
+          <input [(ngModel)]="post.title" type="text" class="form-control w-50" id="title" placeholder="Post Title">
+        </div>
+        <div class="form-group">
+          <label for="Lieu">Lieu</label>
+          <input [(ngModel)]="post.lieu" type="text" class="form-control w-50" id="lieu" placeholder="Lieu">
+        </div>
+        <div class="form-group">
+          <label for="prix">Prix</label>
+          <input [(ngModel)]="post.prix" type="text" class="form-control w-50" id="prix" placeholder="Prix">
+        </div>
+        <div class="form-group">
+          <label for="superficie">superficie</label>
+          <input [(ngModel)]="post.superficie" type="text" class="form-control w-50" id="superficie" placeholder="superficie">
+        </div>
+        <div class="form-group">
+          <label for="chambres">chambres</label>
+          <input [(ngModel)]="post.chambres" type="text" class="form-control w-50" id="chambres" placeholder="chambres">
+        </div>
+        <div class="form-group">
+          <label for="sallesDeBains">sallesDeBains</label>
+          <input type="text" [(ngModel)]="post.sallesDeBains" class="form-control w-50" id="sallesDeBains" placeholder="sallesDeBains">
+        </div>
+        <div class="form-group">
+          <label for="images">Images</label>
+          <input (change)="selectImage($event)" type="file" class="form-control w-50" id="images" multiple>
+        </div>
+        <div class="form-group">
+          <label for="title">Type de transaction</label>
+          <select [(ngModel)]="post.typeDeTransaction" id="selection" class="form-control w-50">
+            <option value="">Liste de choix...</option>
+            <option value="A louer">A louer</option>
+            <option value="A vendre">A vendre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="selection">Type</label>
+          <select [(ngModel)]="post.type" id="selection" class="form-control w-50">
+            <option value="">Liste de choix...</option>
+            <option value="Houses">Houses</option>
+            <option value="Smart Home">Smart Home</option>
+            <option value="Apartement">Apartement</option>
+            <option value="Office">Office</option>
+            <option value="bugalow">bugalow</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="Description">Description</label>
+          <textarea [(ngModel)]="post.description" class="form-control w-50" id="bio" rows="2"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Create</button>
+      </fieldset>
+    </form>
+  </div>
