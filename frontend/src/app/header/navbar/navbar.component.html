@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" [style.background-color]="isScrolled ? '#EE493A' : ''" [class.shadow]="isScrolled">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3"  [style.background-color]="isScrolled ? 'white' : ''" [class.shadow]="isScrolled">
   <div class="container-fluid">
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#"><img src="../../../assets/logo.svg" alt=""></a>
@@ -23,28 +23,24 @@
       [ngClass]="{'show': navbarOpen}"
     >
       <!-- Centered links -->
-      <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start">
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" routerLink="/">Home</a>
+      <ul class="navbar-nav mb-2 mb-lg-0 text-center text-lg-start"  >
+        <li class="nav-item" >
+          <a class="nav-link " aria-current="page" routerLink="/"  [style.color]="isScrolled ? '#002247' : 'white'" [class.color]="isScrolled">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Rent</a>
+          <a class="nav-link" href="#"  [style.color]="isScrolled ? '#002247' : 'white'" [class.color]="isScrolled">RENT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sell</a>
+          <a class="nav-link" href="#"  [style.color]="isScrolled ? '#002247' : 'white'" [class.color]="isScrolled">SELL</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Buy</a>
+          <a class="nav-link" href="#"  [style.color]="isScrolled ? '#002247' : 'white'" [class.color]="isScrolled">BUY</a>
         </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#"  [style.color]="isScrolled ? '#002247' : 'white'" [class.color]="isScrolled">ABOUT</a>
       </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-            >Disabled</a
-          >
-        </li>
+
       </ul>
     </div>
 
@@ -60,7 +56,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link register" routerLink="/signin">
-            <i class="fas fa-user"></i> Account
+            <i class="fas fa-user"></i> Sign In
           </a>
         </li>
       </ul>

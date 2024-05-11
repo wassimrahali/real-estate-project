@@ -1,25 +1,62 @@
-/* Add this CSS to your stylesheet */
-.login-form {
-  padding: 30px ; /* Add padding */
-  margin: 0px;
-  margin-top: 100px;
+.h2 {
+  color: #016450;
+  letter-spacing: 5px;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  src: local("Segoe UI Bold");
+  line-height: 3rem;
+}
+.h6 {
+  color: #999999;
+  padding-top: 15px;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  src: local("Segoe UI Semibold");
+  letter-spacing: 5px;
 }
 
-.login-btn {
-  background-color: #b81717; /* Change button background color */
-  border-color: #17a2b8; /* Change button border color */
-  font-family: Arial, sans-serif; /* Change font family */
+.link {
+  text-decoration: none;
+  color: #016450;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  src: local("Segoe UI Bold");
+  letter-spacing: 4.5px;
+  margin-left: 5px;
+}
+.pad {
+  padding-top: 150px;
+}
+.btncolor {
+  background-color: #016450;
+  font-weight: bold;
+  color: #ffffff;
+}
+.lsp {
+  letter-spacing: 2.5px;
+}
+.weig1 {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  src: local("Segoe UI Semibold");
+}
+.weig2 {
+  font-family: "Segoe UI";
+  font-weight: 400;
+  src: local("Segoe UI");
 }
 
-.login-btn:hover {
-  background-color: #138496; /* Change button background color on hover */
-  border-color: #138496; /* Change button border color on hover */
+.pd {
+  padding-right: 10rem;
+  background-color: #ebebeb;
 }
-
-.link-info {
-  color: #000000; /* Change link color */
+.brad {
+  border-radius: 10px;
 }
-
-.link-info:hover {
-  color: #138496; /* Change link color on hover */
+.form-control::placeholder {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  src: local("Segoe UI Semibold");
+  color: #cacaca;
+  opacity: 1;
 }

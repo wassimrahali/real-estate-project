@@ -1,0 +1,127 @@
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { AuthService } from '../auth.service';
+
+@Component({
+  selector: 'app-body-section',
+  templateUrl: './body-section.component.html',
+  styleUrls: ['./body-section.component.scss']
+})
+export class BodySectionComponent implements AfterViewInit {
+  posts: any[] = [];
+  currentSlide = 0;
+  intervalId: any; // To hold the interval ID
+
+  @ViewChild('container', { static: true }) containerRef!: ElementRef<HTMLDivElement>;
+
+  constructor(public shared: AuthService) { }
+
+  ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.moveSlide(); // Initial slide movement
+    this.startAutomaticSlide(); // Start automatic sliding
+  }
+
+  startAutomaticSlide() {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 3000); // Change slide every 1 second
+  }
+
+  stopAutomaticSlide() {
+    clearInterval(this.intervalId); // Stop automatic sliding
+  }
+
+  prevSlide() {
+    if (this.currentSlide > 0) {
+      this.currentSlide--;
+      this.moveSlide();
+      this.stopAutomaticSlide(); // Stop automatic sliding when user manually interacts
+    }
+  }
+
+  nextSlide() {
+    if (this.currentSlide < this.posts.length - 1) {
+      this.currentSlide++;
+      this.moveSlide();
+    } else {
+      // Move to the first slide when reaching the end
+      this.currentSlide = 0;
+      this.moveSlide();
+    }
+  }
+
+  moveSlide() {
+    const container = this.containerRef.nativeElement;
+    const slide = container.querySelector('.box');
+    if (slide) {
+      const slideWidth = slide.clientWidth;
+      // Get width of a single card
+      container.scrollTo({
+        left: this.currentSlide * slideWidth,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
+
+post:any
+posts: any;
+id: any;
+propService: any;
+stars: any;
+auth: any;
+
+
+
+import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { NgForm } from '@angular/forms';
+
+@Component({
+  selector: 'app-body-section',
+  templateUrl: './body-section.component.html',
+  styleUrl: './body-section.component.scss'
+})
+export class BodySectionComponent {
+prevSlide() {
+throw new Error('Method not implemented.');
+}
+nextSlide() {
+throw new Error('Method not implemented.');
+}
+userReview(_t113: NgForm) {
+throw new Error('Method not implemented.');
+}
+property: any;
+reviews: any;
+sendFormToListings(_t16: NgForm) {
+throw new Error('Method not implemented.');
+}
+locationService: any;
+categoryService: any;
+locationId: any;
+userService: any;
+searchByName(_t42: NgForm) {
+throw new Error('Method not implemented.');
+}
+  post:any
+posts: any;
+id: any;
+propService: any;
+stars: any;
+auth: any;
+  constructor(public shered:AuthService) { }
+  ngOnInit():void{
+    this.shered.getPost().subscribe(
+      res=>{
+        console.log(res)
+        this.post=res
+      },
+      err=>{
+        console.log(err)
+      })
+  }
+}

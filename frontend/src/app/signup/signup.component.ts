@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'c',
@@ -7,6 +8,9 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
+signUpSubmit(_t20: NgForm) {
+throw new Error('Method not implemented.');
+}
   form: any = {
     username: null,
     email: null,
@@ -14,6 +18,8 @@ export class SignupComponent {
   };
   isSignUpFailed = false;
   errorMessage = '';
+errorFlag: any;
+user: any;
 
   constructor(private authService: AuthService) { }
 

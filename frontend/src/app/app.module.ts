@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { BodySectionComponent } from './body-section/body-section.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel'; // Import SlickCarouselModule
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
     HomeComponent,
     BodySectionComponent,
     RealEstateMenuComponent,
-    CreatePostComponent
+    CreatePostComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +38,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
     HttpClientModule,
     FormsModule,
     MdbCollapseModule,
+    SlickCarouselModule // Include SlickCarouselModule here
+
 
   ],
   providers: [

@@ -1,18 +1,35 @@
-<section class="carousel">
-  <div class="carousel__container">
-    <div *ngFor="let Post of post" class="carousel-item">
-      <span class="prix">{{ Post.prix}}</span>
-      <img [src]='"http://localhost:8090/post/"+Post.id+"/images"' />
 
-      <div class="carousel-item__details">
-        <div class="controls">
-
+<div class="container">
+  <div class="box" *ngFor="let Post of post">
+    <div class="card">
+      <div class="top">
+        <img [src]="'http://localhost:8090/post/' + Post.id + '/images'" />
+        <span></span>
+      </div>
+      <div class="bottom">
+        <h3>{{ Post.title }}</h3>
+        <p>{{ Post.desc }}</p>
+        <div class="advants">
+          <div>
+            <span>Bedrooms</span>
+            <div><i class="fas fa-th-large"></i><span>{{ Post.chambres }}</span></div>
+          </div>
+          <div>
+            <span>Bathrooms</span>
+            <div><i class="fas fa-shower"></i><span>{{ Post.sallesDeBains }}</span></div>
+          </div>
+          <div>
+            <span>Area</span>
+            <div><i class="fas fa-vector-square"></i><span>{{ Post.superficie }}<span>Sq Ft</span></span></div>
+          </div>
         </div>
-
-        <h5 class="carousel-item__details--title">{{ Post.title }}</h5>
-        <p class="carousel-item__details--subtitle">{{ Post.desc }}</p>
+        <div class="price">
+          <span>For Sale {{ Post.prix }} DT</span>
+          <span></span>
+        </div>
       </div>
     </div>
-
   </div>
-</section>
+</div>
+
+

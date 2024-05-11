@@ -9,6 +9,9 @@ import { DOCUMENT } from '@angular/common';
 export class NavbarComponent implements OnInit {
   isScrolled: boolean = false;
   navbarOpen: boolean = false;
+dataSharingService: any;
+locationService: any;
+auth: any;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 

@@ -1,13 +1,142 @@
-<form (ngSubmit)="onSubmit()">
-  <label for="username">Username</label>
-  <input type="text" id="username" name="username" [(ngModel)]="form.username" required>
+<!-- <section class="bg-light p-3 p-md-4 p-xl-5">
+  <div class="container" style="margin-top: 50px;">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xxl-11">
+        <div class="card border-light-subtle shadow-sm">
+          <div class="row g-0">
+            <div class="col-12 col-md-6">
+              <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy" src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Welcome back you've been missed!">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="col-12 col-lg-11 col-xl-10">
+                <div class="card-body p-3 p-md-4 p-xl-5">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="mb-5">
+                        <div class="text-center mb-4">
+                          <a href="#!">
+                            <img src="../../../assets/logo.svg" alt="BootstrapBrain Logo" width="175" height="57">
+                          </a>
+                        </div>
+                        <h2 class="h4 text-center">Registration</h2>
+                      </div>
+                    </div>
+                  </div>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" [(ngModel)]="form.email" required>
+                  <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+                    <div class="row gy-3 overflow-hidden">
+                      <div class="col-12">
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="username" name="username" placeholder="First Name" [(ngModel)]="form.username" required>
+                          <label for="username" class="form-label">Username</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" [(ngModel)]="form.email" required>
+                          <label for="email" class="form-label">Email</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control" name="password" id="password" [(ngModel)]="form.password" placeholder="Password" required>
+                          <label for="password" class="form-label">Password</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required>
+                          <label class="form-check-label text-secondary" for="iAgree">
+                            I agree to the <a href="#!" class="link-primary text-decoration-none">terms and conditions</a>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="d-grid">
+                          <button class="btn custom-btn" type="submit">Register</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="mb-0 mt-5 text-secondary text-center">Already have an account? <a routerLink="/signin" class="link-primary text-decoration-none">Sign in</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
 
-  <label for="password">Password</label>
-  <input type="password" id="password" name="password" [(ngModel)]="form.password" required>
+<div class="container-fluid my-5 p-5 card shadow-lg bg-white rounded border-0" style="width: auto;">
+  <div class="row d-flex justify-content-between py-lg-4 px-4">
 
-  <button type="submit">Register</button>
-</form>
-<div *ngIf="isSignUpFailed" class="error-message">{{ errorMessage }}</div>
+      <div class="col-lg-6 d-none d-lg-block align-self-stretch">
+          <h2 class="h2">Sign Up to Start Buying your Dream Home</h2>
+          <h6 class="h6 pb-1 mb-lg-4">Have an account?<a href="../signin" class="link">Log in</a></h6>
+          <img src="../../assets/signup.png" class="img-fluid h-50 w-100 mt-5" />
+      </div>
+
+      <div class="col-lg-5 mb-2">
+          <!-- Log in Error Messages -->
+          <div class="alert alert-danger d-flex align-items-center mt-4" role="alert" *ngIf="errorFlag">
+              <i class="material-icons"> warning </i>
+              <div class="ms-2">Sorry can't serve you right now, visit again after sometime</div>
+          </div>
+
+          <!-- Log in form -->
+          <h2 class="h2 mb-lg-2 d-lg-none">Sign Up to Start Buying your Dream Home</h2>
+          <h4 class="h2 text-center d-none d-lg-block">Sign Up</h4>
+          <form (ngSubmit)="signUpSubmit(signUpForm)" #signUpForm="ngForm">
+              <div class="mb-4">
+                  <label for="first-name" class="form-label lsp weig1 mt-5">First Name</label>
+                  <input type="text" class="form-control mt-2 pd py-4 lsp weig3 border-0 brad" id="first-name"
+                      name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" placeholder="John"
+                      required />
+                  <p class="small text-danger my-2" *ngIf="firstName.dirty && firstName.invalid">
+                      First Name can't be empty !
+                  </p>
+              </div>
+
+              <div class="mb-4">
+                  <label for="last-name" class="form-label lsp weig1">Last Name</label>
+                  <input type="text" class="form-control mt-2 pd py-4 weig2 border-0 brad" id="last-name"
+                      name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel" placeholder="Doe" />
+              </div>
+
+              <div class="mb-4">
+                  <label for="username" class="form-label lsp weig1">Username</label>
+                  <input type="text" class="form-control mt-2 pd py-4 lsp weig2 border-0 brad" id="username"
+                      name="username" [(ngModel)]="user.username" #username="ngModel" placeholder="JohnDoe19"
+                      required />
+                  <p class="small text-danger my-2" *ngIf="username.dirty && username.invalid">
+                      Username can't be empty !
+                  </p>
+              </div>
+
+              <div class="mb-3">
+                  <label for="password" class="form-label lsp weig1">Password</label>
+                  <input type="password" class="form-control mt-2 pd py-4 lsp weig2 border-0 brad" id="password"
+                      name="password" [(ngModel)]="user.password" #password="ngModel" placeholder="********"
+                      required />
+                  <p class="small text-danger my-2" *ngIf="password.dirty && password.invalid">
+                      Password can't be empty !
+                  </p>
+              </div>
+
+              <button type="submit" class="btn btncolor px-5 lsp mt-5 shadow-lg" style="margin:auto;display:block"
+                  [disabled]="signUpForm.pristine || signUpForm.invalid">
+                  SIGNUP
+              </button>
+          </form>
+          <h6 class="h6 pb-1 mb-lg-4 d-lg-none text-center">Have an account?<a href="../signin" class="link">Log
+                  in</a></h6>
+
+      </div>
+  </div>
+</div>

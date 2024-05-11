@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,12 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+signInSubmit(_t26: NgForm) {
+throw new Error('Method not implemented.');
+}
+successFlag: any;
+errorFlag: any;
+user: any;
 toggleNavbar() {
 throw new Error('Method not implemented.');
 }
