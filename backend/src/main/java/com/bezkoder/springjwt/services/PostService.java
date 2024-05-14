@@ -40,5 +40,7 @@ public class PostService {
         repository.deleteAll();
         System.out.println("All posts deleted");
     }
+
+
 }
 

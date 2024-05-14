@@ -1,0 +1,58 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <a class="form-label" href="#">Dashboard</a>
+    <div class="float-end"><h3 class="form-label">{{ user.username}}</h3><p>{{ user.email  }}</p></div>
+
+  </div>
+</nav>
+<nav class="navbar bg-body-tertiary">
+  <div class="container">
+    <span class="navbar-brand mb-0 h1">Profile</span>
+  </div>
+</nav>
+<div class="card text-bg-light mb-3 m-5 w-100" style="max-width: 50rem;">
+  <div class="card-body">
+    <h3><b>Profile Information</b></h3>
+    <label for="formGroupExampleInput" class="form-label">Update your account's profile information and email address.</label>
+    <div class="form-floating mb-3">
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Name</label>
+        <input [(ngModel)]="user.username" type="text" type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Email</label>
+        <input [(ngModel)]="user.email" type="text" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+        <button class="btn btn-dark mt-3" (click)="Update()">Save</button>
+      </div>
+   </div>
+  </div>
+</div>
+<div class="card text-bg-light mb-3 m-5 w-100" style="max-width: 50rem;">
+  <div class="card-body">
+    <h3><b>Update Password</b></h3>
+    <div class="form-floating mb-3">
+      <div class="mb-3">
+        <p class="form-label">Ensure your account is using a long, random password to stay secure.</p>
+        <label for="inputPassword5" class="form-label">Current Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<label [(ngModel)]="user.password" for="inputPassword5" class="form-label">New Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<label for="inputPassword5" class="form-label">Confirm Password</label>
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<button class="btn btn-dark mt-3" (click)="Update()">Save</button>
+</div>
+   </div>
+  </div>
+</div>
+   <div class="card text-bg-light mb-3 m-5 w-100" style="max-width: 50rem;">
+    <div class="card-body">
+      <h3><b>Delete Account</b></h3>
+      <div class="form-floating mb-3">
+        <div class="mb-3">
+          <p class="form-label">Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.</p>
+          <button class="btn btn-danger mt-3" (click)="Delete()">Delete Account</button>
+        </div>
+     </div>
+    </div>
+  </div>
+  <br>

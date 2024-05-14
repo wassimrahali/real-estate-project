@@ -16,7 +16,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { BodySectionComponent } from './body-section/body-section.component';
 import { CreatePostComponent } from './create-post/create-post.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel'; // Import SlickCarouselModule
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { NavbarForAllPagesComponent } from './navbar-for-all-pages/navbar-for-all-pages.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -31,6 +34,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel'; // Import SlickCarouse
     BodySectionComponent,
     RealEstateMenuComponent,
     CreatePostComponent,
+    PostDetailComponent,
+    NavbarForAllPagesComponent,
+    UserProfileComponent
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel'; // Import SlickCarouse
     HttpClientModule,
     FormsModule,
     MdbCollapseModule,
-    SlickCarouselModule // Include SlickCarouselModule here
+    SlickCarouselModule ,
 
 
   ],

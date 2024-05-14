@@ -1,42 +1,45 @@
-
+<app-navbar />
   <div class="container">
+
+    <div class="mb-3 form-group">
     <h1>Create new post</h1>
     <form (submit)="Create()">
       <fieldset>
         <div class="form-group">
           <label for="title">Post Title</label>
-          <input [(ngModel)]="post.title" type="text" class="form-control w-50" id="title" placeholder="Post Title">
+          <input [(ngModel)]="post.title" type="text" class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="title" placeholder="RENT HOUSE ">
         </div>
         <div class="form-group">
-          <label for="Lieu">Lieu</label>
-          <input [(ngModel)]="post.lieu" type="text" class="form-control w-50" id="lieu" placeholder="Lieu">
+          <label for="Lieu">Location</label>
+          <input [(ngModel)]="post.lieu" type="text"  class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="lieu" placeholder="EZZAHRA">
+        </div>
+
+        <div class="form-group">
+          <label for="prix">Price</label>
+          <input [(ngModel)]="post.prix" type="text"  class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="prix" placeholder="3000">
         </div>
         <div class="form-group">
-          <label for="prix">Prix</label>
-          <input [(ngModel)]="post.prix" type="text" class="form-control w-50" id="prix" placeholder="Prix">
+          <label for="superficie">Area</label>
+          <input [(ngModel)]="post.superficie" type="text" class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="superficie" placeholder="area">
         </div>
         <div class="form-group">
-          <label for="superficie">superficie</label>
-          <input [(ngModel)]="post.superficie" type="text" class="form-control w-50" id="superficie" placeholder="superficie">
+          <label for="chambres">Rooms</label>
+          <input [(ngModel)]="post.chambres" type="text"  class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="chambres" placeholder="4">
         </div>
         <div class="form-group">
-          <label for="chambres">chambres</label>
-          <input [(ngModel)]="post.chambres" type="text" class="form-control w-50" id="chambres" placeholder="chambres">
-        </div>
-        <div class="form-group">
-          <label for="sallesDeBains">sallesDeBains</label>
-          <input type="text" [(ngModel)]="post.sallesDeBains" class="form-control w-50" id="sallesDeBains" placeholder="sallesDeBains">
+          <label for="sallesDeBains">Bathroom</label>
+          <input type="text" [(ngModel)]="post.sallesDeBains" class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="sallesDeBains" placeholder="1">
         </div>
         <div class="form-group">
           <label for="images">Images</label>
-          <input (change)="selectImage($event)" type="file" class="form-control w-50" id="images" multiple>
+          <input (change)="selectImage($event)" type="file"  class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="images" multiple>
         </div>
         <div class="form-group">
           <label for="title">Type de transaction</label>
-          <select [(ngModel)]="post.typeDeTransaction" id="selection" class="form-control w-50">
+          <select  class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" [(ngModel)]="post.typeDeTransaction" id="selection" class="form-control w-50">
             <option value="">Liste de choix...</option>
-            <option value="A louer">A louer</option>
-            <option value="A vendre">A vendre</option>
+            <option value="A louer">RENT</option>
+            <option value="A vendre">BUY</option>
           </select>
         </div>
         <div class="form-group">
@@ -52,9 +55,11 @@
         </div>
         <div class="form-group">
           <label for="Description">Description</label>
-          <textarea [(ngModel)]="post.description" class="form-control w-50" id="bio" rows="2"></textarea>
+          <textarea [(ngModel)]="post.description" class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="bio" rows="2"></textarea>
         </div>
-        <button type="submit" class="btn btn-success mt-3">Create</button>
+        <button type="submit" class="form-control bg-dark border-0 brad" style="color: white;">Create</button>
       </fieldset>
     </form>
+  </div>
+
   </div>

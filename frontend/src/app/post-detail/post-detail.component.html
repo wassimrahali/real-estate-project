@@ -1,0 +1,24 @@
+<div class="card-wrapper">
+  <div class="card">
+    <!-- card left -->
+    <div class="product-imgs">
+      <div class="img-display">
+        <div #imgShowcase class="img-showcase">
+          <img *ngFor="let image of images; let i = index" [src]="'http://localhost:8090/post/uploads/' + image" class="img-fluid" [alt]="'shoe image ' + (i + 1)" (click)="selectImage(i + 1)">
+        </div>
+      </div>
+      <div class="img-select">
+        <div class="img-item" *ngFor="let image of images; let i = index">
+          <a (click)="selectImage(i + 1)">
+            <img [src]="'http://localhost:8090/post/uploads/' + image" class="img-thumbnail" [alt]="'shoe image ' + (i + 1)">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- card right -->
+    <div>
+      pp
+    </div>
+
+    </div>
+  </div>

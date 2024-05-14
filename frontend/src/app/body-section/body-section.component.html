@@ -1,7 +1,6 @@
-
-<div class="container">
+<div #container class="container">
   <div class="box" *ngFor="let Post of post">
-    <div class="card">
+    <div class="card" [routerLink]="['/get', Post.id]">
       <div class="top">
         <img [src]="'http://localhost:8090/post/' + Post.id + '/images'" />
         <span></span>
@@ -31,5 +30,3 @@
     </div>
   </div>
 </div>
-
-

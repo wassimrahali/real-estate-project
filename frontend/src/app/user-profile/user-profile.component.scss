@@ -1,0 +1,60 @@
+.profile-page {
+  height: 100vh;
+  overflow: scroll;
+  .header {
+    background: white;
+    padding-left: 20px;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid light-gray;
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 18px;
+        margin: 0 10px;
+      }
+    }
+
+    .header-title {
+      color: text-dark;
+      font-weight: 900;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: 1002;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  .spinner-wrapper {
+    position: relative;
+    top: 40%;
+    left: 50%;
+  }
+
+  .example-form {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50vw;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  td {
+    padding-right: 8px;
+  }
+
+  button {
+    margin: 20px 10px;
+  }
+}

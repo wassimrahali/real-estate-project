@@ -71,6 +71,8 @@ public class PostController {
         }
     }
 
+
+
     private List<String> saveImages(MultipartFile[] files) {
         List<String> imageUrls = new ArrayList<>();
         for (MultipartFile file : files) {
@@ -146,7 +148,12 @@ public class PostController {
         }
     }
 
-
+    @GetMapping(value = "/uploads/{imageName:.+}", produces = MediaType.IMAGE_JPEG_VALUE)
+    public ResponseEntity<byte[]> getImage(@PathVariable String imageName) throws IOException {
+        Path imagePath = Paths.get("uploads", imageName);
+        byte[] imageData = Files.readAllBytes(imagePath);
+        return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageData);
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletePostById(@PathVariable Long id) {
         try {

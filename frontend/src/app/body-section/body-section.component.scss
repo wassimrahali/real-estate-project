@@ -131,3 +131,35 @@
   font-size: 2em; /* Adjust the size of the icons */
   color: #ffffff; /* Set the color of the icons */
 }
+
+
+
+
+
+.box {
+
+}
+
+.card {
+
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+
+
+.card .bottom {
+  margin-top: 10px;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.card:hover {
+  background-color: #f0f0f0;
+}

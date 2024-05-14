@@ -40,6 +40,7 @@ auth: any;
   constructor(public shered:AuthService) { }
   ngOnInit():void{
     this.shered.getPost().subscribe(
+
       res=>{
         console.log(res)
         this.post=res

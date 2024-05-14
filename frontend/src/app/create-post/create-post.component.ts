@@ -7,6 +7,9 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./create-post.component.scss']
 })
 export class CreatePostComponent {
+[x: string]: any;
+  showSuccessAlert = false;
+  showDangerAlert = false;
   post = {
     title: "Example Post",
     prix: 100000,
@@ -17,9 +20,8 @@ export class CreatePostComponent {
     superficie: 150,
     sallesDeBains: 2,
     chambres: 3,
-    user_id: 1
+    user_id: 1 // Assuming user_id is a number
   };
-
   imageFiles: File[] = [];
 
   constructor(public shared: AuthService) { }
@@ -41,6 +43,10 @@ export class CreatePostComponent {
     formData.append('chambres', this.post.chambres.toString());
     formData.append('user_id', this.post.user_id.toString());
 
+    // Reset alert variables
+    this.showSuccessAlert = false;
+    this.showDangerAlert = false;
+
     for (let file of this.imageFiles) {
       formData.append('imageFiles', file);
     }
@@ -49,11 +55,13 @@ export class CreatePostComponent {
       .subscribe(
         res => {
           console.log(res);
-          alert('Post created successfully.');
+          this.showSuccessAlert = true; // Show success alert
+          // Optionally, you can reset the form or perform any other actions
         },
         err => {
           console.error(err);
-          alert('Failed to create post.');
+          this.showDangerAlert = true; // Show danger alert
+          // Optionally, you can display the error message or perform any other actions
         }
       );
   }

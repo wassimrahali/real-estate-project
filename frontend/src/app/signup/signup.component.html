@@ -72,8 +72,9 @@
     </div>
   </div>
 </section> -->
+<app-navbar-for-all-pages />
 
-<div class="container-fluid my-5 p-5 card shadow-lg bg-white rounded border-0" style="width: auto;">
+<div class="container-fluid card shadow-lg bg-white rounded border-0" style="width: auto;padding-top: 110px;">
   <div class="row d-flex justify-content-between py-lg-4 px-4">
 
       <div class="col-lg-6 d-none d-lg-block align-self-stretch">
@@ -94,33 +95,24 @@
           <h4 class="h2 text-center d-none d-lg-block">Sign Up</h4>
           <form (ngSubmit)="signUpSubmit(signUpForm)" #signUpForm="ngForm">
               <div class="mb-4">
-                  <label for="first-name" class="form-label lsp weig1 mt-5">First Name</label>
+                  <label for="first-name" class="form-label lsp weig1 mt-5 small-label">First Name</label>
                   <input type="text" class="form-control mt-2 pd py-4 lsp weig3 border-0 brad" id="first-name"
                       name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" placeholder="John"
-                      required />
+                      required  />
                   <p class="small text-danger my-2" *ngIf="firstName.dirty && firstName.invalid">
                       First Name can't be empty !
                   </p>
               </div>
 
               <div class="mb-4">
-                  <label for="last-name" class="form-label lsp weig1">Last Name</label>
+                  <label for="last-name" class="form-label lsp weig1 small-label">Last Name</label>
                   <input type="text" class="form-control mt-2 pd py-4 weig2 border-0 brad" id="last-name"
                       name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel" placeholder="Doe" />
               </div>
 
-              <div class="mb-4">
-                  <label for="username" class="form-label lsp weig1">Username</label>
-                  <input type="text" class="form-control mt-2 pd py-4 lsp weig2 border-0 brad" id="username"
-                      name="username" [(ngModel)]="user.username" #username="ngModel" placeholder="JohnDoe19"
-                      required />
-                  <p class="small text-danger my-2" *ngIf="username.dirty && username.invalid">
-                      Username can't be empty !
-                  </p>
-              </div>
 
               <div class="mb-3">
-                  <label for="password" class="form-label lsp weig1">Password</label>
+                  <label for="password" class="form-label lsp weig1 small-label">Password</label>
                   <input type="password" class="form-control mt-2 pd py-4 lsp weig2 border-0 brad" id="password"
                       name="password" [(ngModel)]="user.password" #password="ngModel" placeholder="********"
                       required />
@@ -140,3 +132,4 @@
       </div>
   </div>
 </div>
+

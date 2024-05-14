@@ -1,34 +1,33 @@
 .h2 {
-  color: #016450;
-  letter-spacing: 5px;
-  font-family: "Segoe UI";
+  color: #100164;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   src: local("Segoe UI Bold");
-  line-height: 3rem;
+  line-height: 2rem;
 }
 .h6 {
   color: #999999;
   padding-top: 15px;
   font-family: "Segoe UI";
-  font-weight: 600;
+  font-weight: 500;
   src: local("Segoe UI Semibold");
-  letter-spacing: 5px;
+  font-size: 15px;
+
 }
 
 .link {
   text-decoration: none;
   color: #016450;
   font-family: "Segoe UI";
-  font-weight: 700;
+  font-weight: 500;
   src: local("Segoe UI Bold");
-  letter-spacing: 4.5px;
   margin-left: 5px;
 }
 .pad {
-  padding-top: 150px;
+  padding-top: 110px;
 }
 .btncolor {
-  background-color: #016450;
+  background-color: #3e0164;
   font-weight: bold;
   color: #ffffff;
 }
@@ -47,7 +46,7 @@
 }
 
 .pd {
-  padding-right: 10rem;
+  padding-right: 3rem;
   background-color: #ebebeb;
 }
 .brad {
@@ -59,4 +58,25 @@
   src: local("Segoe UI Semibold");
   color: #cacaca;
   opacity: 1;
+}
+
+// Form Control Styling
+.form-control {
+  &:focus {
+    border-color: #80bdff; // example focus color
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); // example focus shadow
+  }
+}
+
+// Alert Styling
+.alert {
+  &.alert-danger {
+    background-color: #f8d7da; // example danger background color
+    border-color: #f5c6cb; // example danger border color
+    color: #721c24; // example danger text color
+  }
+}
+
+.small-label {
+  font-size: 0.1rem; /* Adjust the size as needed */
 }

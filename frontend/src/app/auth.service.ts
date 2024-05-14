@@ -27,5 +27,7 @@ export class AuthService {
   getPost(){
     return this.http.get(this.UrlPost);
   }
+    getPostById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.UrlPost}/${id}/images`);
+  }
 }
-

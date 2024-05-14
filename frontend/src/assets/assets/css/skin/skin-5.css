@@ -1,0 +1,31 @@
+::selection {
+	background: #1ABC9C
+}
+::-moz-selection {
+background:#1ABC9C
+}
+::-webkit-selection {
+background:#1ABC9C
+}
+
+
+/*-----Background Color-----*/
+.get-in-touch-btn:hover::after,.nav-dark.header-nav .nav > li .sub-menu li:hover > a, .site-button, .sx-title-swip::before,.site-button-link::before,.testimonial-home.number-slider .owl-dots,.icon-count-2-outer::after,.footer-dark .social-icons li a:hover,.client-logo-pic span:hover,.number-block-two .figcaption::before,.number-block-two .figcaption::after,.filter-navigation li a.btn:hover::after,.counter-blocks .sx-icon-box-wraper:hover,.footer-light .social-icons li a:hover,.sx-bg-primary,.owl-carousel .owl-dots .owl-dot.active span, .owl-carousel .owl-dots .owl-dot:hover span{
+	background-color: #1ABC9C	
+}
+
+
+
+/*-----Text Color-----*/
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, a:active, a:hover, a:focus, .header-nav .nav > li:hover > a, .header-nav .nav > li.active > a, .header-nav .nav > li.current-menu-item > a, .sx-text-primary,.testimonial-2 .fa-quote-right,.filter-pos-right .btn-filter-wrap li.btn-active,.filter-pos-right .btn-filter-wrap li:hover,.footer-dark .footer-top a:active, .footer-dark .footer-top a:focus, .footer-dark .footer-top a:hover,.site-footer .widget_services ul li a:hover,.filter-navigation li.active a,.our-team-3 .our-team-info .our-team-content a:hover,h1 a.sx-text-white:hover, h2 a.sx-text-white:hover, h3 a.sx-text-white:hover, h4 a.sx-text-white:hover, h5 a.sx-text-white:hover, h6 a.sx-text-white:hover,.testimonial-1 .fa-quote-right,.sx-breadcrumb li a,.sx-breadcrumb li a:hover,.widget_services ul li a:hover,.page-notfound span.title,.widget_tag_cloud a:hover{
+    color: #1ABC9C;
+}
+.our-story-year{
+    color: #1ABC9C !important;
+}
+
+
+/*-----Border Color-----*/
+.get-in-touch-btn.from-top::before,.about-home-left,.from-top::before, .image-effect-one .mfp-link{
+	border-color: #1ABC9C;
+}

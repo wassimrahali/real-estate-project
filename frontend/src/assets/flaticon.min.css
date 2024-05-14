@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after{font-family:Flaticon;font-style:normal;}
+
+.mt-icon-box-xl [class^="flaticon-"]:before, .mt-icon-box-xl [class*=" flaticon-"]:before,
+.mt-icon-box-xl [class^="flaticon-"]:after, .mt-icon-box-xl [class*=" flaticon-"]:after{font-size:96px;}
+.mt-icon-box-lg [class^="flaticon-"]:before, .mt-icon-box-lg [class*=" flaticon-"]:before,
+.mt-icon-box-lg [class^="flaticon-"]:after, .mt-icon-box-lg [class*=" flaticon-"]:after{font-size:72px;}
+.mt-icon-box-md [class^="flaticon-"]:before, .mt-icon-box-md [class*=" flaticon-"]:before,
+.mt-icon-box-md [class^="flaticon-"]:after, .mt-icon-box-md [class*=" flaticon-"]:after{font-size:48px;}
+.mt-icon-box-sm [class^="flaticon-"]:before, .mt-icon-box-sm [class*=" flaticon-"]:before,
+.mt-icon-box-sm [class^="flaticon-"]:after, .mt-icon-box-sm [class*=" flaticon-"]:after{font-size:36px;}
+.mt-icon-box-xs [class^="flaticon-"]:before, .mt-icon-box-xs [class*=" flaticon-"]:before,
+.mt-icon-box-xs [class^="flaticon-"]:after, .mt-icon-box-xs [class*=" flaticon-"]:after{font-size:24px;}
+
+.flaticon-sketch:before { content: "\f100"; }
+.flaticon-stairs:before { content: "\f101"; }
+.flaticon-window:before { content: "\f102"; }
+.flaticon-skyline:before { content: "\f103"; }
+.flaticon-bed:before { content: "\f104"; }
+.flaticon-door:before { content: "\f105"; }
+.flaticon-living-room:before { content: "\f106"; }
+.flaticon-door-1:before { content: "\f107"; }
+.flaticon-window-1:before { content: "\f108"; }
+.flaticon-closet:before { content: "\f109"; }
+.flaticon-stairs-1:before { content: "\f10a"; }
+.flaticon-vase:before { content: "\f10b"; }
+.flaticon-desk:before { content: "\f10c"; }
+.flaticon-lamp:before { content: "\f10d"; }
+.flaticon-armchair:before { content: "\f10e"; }
+.flaticon-window-2:before { content: "\f10f"; }
+.flaticon-bed-1:before { content: "\f110"; }
+.flaticon-chair:before { content: "\f111"; }
+.flaticon-lamp-1:before { content: "\f112"; }
+.flaticon-table:before { content: "\f113"; }
+.flaticon-mirror:before { content: "\f114"; }
+.flaticon-bookcase:before { content: "\f115"; }
+.flaticon-cactus:before { content: "\f116"; }
+.flaticon-blueprint:before { content: "\f117"; }
+.flaticon-tv:before { content: "\f118"; }
+.flaticon-chest:before { content: "\f119"; }
+.flaticon-desk-1:before { content: "\f11a"; }
+.flaticon-chandelier:before { content: "\f11b"; }
+.flaticon-clock:before { content: "\f11c"; }
+.flaticon-coat-stand:before { content: "\f11d"; }
+.flaticon-chest-1:before { content: "\f11e"; }
+.flaticon-3d:before { content: "\f11f"; }
+.flaticon-architect:before { content: "\f120"; }
+.flaticon-barrier:before { content: "\f121"; }
+.flaticon-bed-2:before { content: "\f122"; }
+.flaticon-blueprint-1:before { content: "\f123"; }
+.flaticon-building:before { content: "\f124"; }
+.flaticon-building-1:before { content: "\f125"; }
+.flaticon-certificate:before { content: "\f126"; }
+.flaticon-contract:before { content: "\f127"; }
+.flaticon-cornice:before { content: "\f128"; }
+.flaticon-dimensions:before { content: "\f129"; }
+.flaticon-door-2:before { content: "\f12a"; }
+.flaticon-drawing-table:before { content: "\f12b"; }
+.flaticon-electric-pole:before { content: "\f12c"; }
+.flaticon-fence:before { content: "\f12d"; }
+.flaticon-helmet:before { content: "\f12e"; }
+.flaticon-home:before { content: "\f12f"; }
+.flaticon-home-1:before { content: "\f130"; }
+.flaticon-lift:before { content: "\f131"; }
+.flaticon-living-room-1:before { content: "\f132"; }
+.flaticon-house:before { content: "\f133"; }
+.flaticon-measuring-tape:before { content: "\f134"; }
+.flaticon-parquet:before { content: "\f135"; }
+.flaticon-blueprint-2:before { content: "\f136"; }
+.flaticon-power-strip:before { content: "\f137"; }
+.flaticon-project:before { content: "\f138"; }
+.flaticon-paint-roller:before { content: "\f139"; }
+.flaticon-ruler:before { content: "\f13a"; }
+.flaticon-table-1:before { content: "\f13b"; }
+.flaticon-sketch-1:before { content: "\f13c"; }
+.flaticon-ruler-1:before { content: "\f13d"; }
+.flaticon-set-square:before { content: "\f13e"; }
+.flaticon-table-2:before { content: "\f13f"; }
+.flaticon-table-3:before { content: "\f140"; }
+.flaticon-bed-3:before { content: "\f141"; }
+.flaticon-stairs-2:before { content: "\f142"; }
+.flaticon-brick-wall:before { content: "\f143"; }
+.flaticon-real-estate:before { content: "\f144"; }
+.flaticon-window-3:before { content: "\f145"; }
+.flaticon-window-4:before { content: "\f146"; }
